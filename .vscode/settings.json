@@ -1,0 +1,10 @@
+{
+    "editor.fontFamily": "D2Coding, Consolas, 'Courier New', monospace",
+    "eslint.alwaysShowStatus": true,
+   
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+      },
+     "eslint.validate": ["javascript"]
+  
+}

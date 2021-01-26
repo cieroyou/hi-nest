@@ -1,3 +1,4 @@
+import { UpdateMovieDto } from './dto/update-movie-dto';
 import { CreateMovieDto } from './dto/create-movie.dto';
 import { Movie } from './entities/movie.entity';
 import { Injectable } from '@nestjs/common';
@@ -25,5 +26,11 @@ export class MoviesService {
       id: this.movies.length + 1,
       ...movieData,
     });
+  }
+
+  update(id: number, updateData: UpdateMovieDto) {
+    const movie = this.getOne(id);
+    this.deleteOne(id);
+    this.movies.push({ ...movie, ...updateData });
   }
 }
